@@ -28,7 +28,10 @@ public class ProfileService {
     private final AuthenticationManager authenticationManager;
     private final JwtUtil jwtUtil;
 
-    @Value("${app.activation.url}")
+//    @Value("${app.activation.url}")
+//    private String activationURL;
+
+    @Value("${app.activation.url:http://localhost:8080/activate}")
     private String activationURL;
 
     public ProfileDTO registerProfile(ProfileDTO profileDTO) {
